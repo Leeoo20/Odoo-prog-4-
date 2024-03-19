@@ -29,6 +29,7 @@ export class TetrasStore extends Reactive {
     async _processData(loadedData) {
         this.students = loadedData["tetras.student"];
         this.teachers = loadedData["tetras.teacher"];
+        this.controls = loadedData["tetras.control"];
     }
 
     showScreen(name, props) {

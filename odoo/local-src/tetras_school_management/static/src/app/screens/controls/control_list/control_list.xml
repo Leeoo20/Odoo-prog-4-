@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+     <t t-name="tetras_school_management.ControlListScreen">
+         <strong>Controls List</strong>
+         <table>
+             <thead>
+                 <tr>
+                     <td style="font-weight: bold">Name</td>
+                 </tr>
+             </thead>
+             <tbody>
+                 <t t-foreach="tetras.controls" t-as="control" t-key="control.id">
+                     <ControlLine name="control.name"
+                                  controlId="control.id"
+                                  onClick="() => this.onControlClick(control)" />
+                 </t>
+             </tbody>
+         </table>
+         <div t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
+
+    </t>
+</templates>

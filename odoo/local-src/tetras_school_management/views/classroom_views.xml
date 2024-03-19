@@ -1,0 +1,22 @@
+<odoo>
+      <record id="view_tetras_classroom_form" model="ir.ui.view">
+        <field name="name">tetras.classroom.form</field>
+        <field name="model">tetras.classroom</field>
+        <field name="arch" type="xml">
+            <form string="Classroom">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="student_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+   <record id="tetras_classroom_action" model="ir.actions.act_window">
+        <field name="name">Classrooms</field>
+        <field name="res_model">tetras.classroom</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

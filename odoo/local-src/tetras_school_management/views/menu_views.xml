@@ -31,4 +31,21 @@
         parent="menu_tetras_school_management_root"
         action="tetras_grade_action"
         sequence="2" />
+
+    <menuitem
+        id="menu_tetras_classroom"
+        name="Classrooms"
+        parent="menu_tetras_school_management_root"
+        action="tetras_classroom_action"
+        sequence="2" />
+
+     <menuitem
+        id="menu_tetras_control"
+        name="Controls"
+        parent="menu_tetras_school_management_root"
+        action="tetras_control_action"
+        sequence="2" />
+
+
+
 </odoo>

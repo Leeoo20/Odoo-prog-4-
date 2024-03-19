@@ -10,3 +10,7 @@ export class Student {
 export class Mark {
 
 }
+
+export class Control {
+
+}

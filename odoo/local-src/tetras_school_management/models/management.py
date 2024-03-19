@@ -11,5 +11,9 @@ class TetrasManagement(models.Model):
             "tetras.student": self.env["tetras.student"].search_read(
                 fields=["name", "email", "id", "birth_day", "phone"]),
             "tetras.teacher": self.env["tetras.teacher"].search_read(
-                fields=["name", "email", "id", "birth_day", "phone"])
+                fields=["name", "email", "id", "birth_day", "phone"]),
+            "tetras.control": self.env["tetras.control"].search_read(
+                fields=["name"]
+            )
+
         }
