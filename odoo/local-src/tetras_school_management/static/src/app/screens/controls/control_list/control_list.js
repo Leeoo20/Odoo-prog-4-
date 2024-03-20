@@ -16,7 +16,7 @@ export class ControlListScreen extends Component {
         this.tetras = useTetras();
     }
 
-    async onControlClick(student) {
+    async onControlClick(control) {
         this.tetras.showScreen("ControlFormScreen", {"control": control})
     }
 }

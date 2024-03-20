@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
-     <t t-name="tetras_school_management.ControlListScreen">
+     <t t-name="tetras_school_management.ClassroomListScreen">
          <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
          <div class="body">
              <div class="container">
-                 <h1>Controls List</h1>
+                 <h1>Classrooms List</h1>
                  <table>
                      <tbody>
-                         <t t-foreach="tetras.controls" t-as="control" t-key="control.id">
-                             <ControlLine name="control.name"
-                                          controlId="control.id"
-                                          onClick="() => this.onControlClick(control)" />
+                         <t t-foreach="tetras.classrooms" t-as="classroom" t-key="classroom.id">
+                             <ClassroomLine name="classroom.name"
+                                          classroomId="classroom.id"
+                                          onClick="() => this.onClassroomClick(classroom)" />
                          </t>
                      </tbody>
                  </table>

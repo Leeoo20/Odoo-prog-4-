@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.ControlFormScreen">
-         <div class="control-form">
-             <div t-on-click="() => this.tetras.showScreen('ControlListScreen')">Back</div>
-             <span>Name: <t t-esc="props.control.name"/></span><br/>
+         <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
+         <div class="body">
+             <div class="container">
+                 <div>
+                     <h2>Name</h2>
+                     <t t-esc="props.control.name"/>
+                     <table>
 
+                          <thead>
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Student</th>
+                              <th scope="col">Grade</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <t t-foreach="tetras.controls" t-as="control" t-key="control.id">
+                                <ControlStudentLine name="control.name"
+                                                    studentGrade = "control.studentGrade"
+                                                    grade = "control.grade"
+                                                    controlId="control.id"/>
+                              </t>
+                          </tbody>
+                        </table>
+
+                 </div>
+             </div>
          </div>
     </t>
 </templates>

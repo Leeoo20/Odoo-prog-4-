@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.MainScreen">
-         <h1>Menu principal : </h1>
-         <div class="wrapper">
-             <div class="button main-button"
-                  t-on-click="() => tetras.showScreen('StudentListScreen')">Students</div>
-             <div class="button main-button"
-                  t-on-click="() => tetras.showScreen('TeacherListScreen')">Teachers</div>
-             <div class="button main-button"
-                  t-on-click="() => tetras.showScreen('ControlListScreen')">Controls</div>
+         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+         <div class="body">
+             <div class="container">
+                 <h1>Menu principal</h1>
+                 <div class="wrapper">
+                     <div class="button main-button"
+                          t-on-click="() => tetras.showScreen('StudentListScreen')">
+                         <i class='bx bxs-school'></i>
+                         Students
+                     </div>
+                     <div class="button main-button"
+                          t-on-click="() => tetras.showScreen('TeacherListScreen')">
+                         <i class='bx bxs-book-reader' ></i>
+                         Teachers
+                     </div>
+                     <div class="button main-button"
+                          t-on-click="() => tetras.showScreen('ControlListScreen')">
+                         <i class='bx bx-detail'></i>
+                         Controls
+                     </div>
+
+                      <div class="button main-button"
+                          t-on-click="() => tetras.showScreen('ClassroomListScreen')">
+                         <i class='bx bx-detail'></i>
+                         Classrooms
+                     </div>
+
+                 </div>
+             </div>
          </div>
     </t>
 </templates>

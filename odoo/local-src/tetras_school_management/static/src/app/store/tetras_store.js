@@ -26,10 +26,38 @@ export class TetrasStore extends Reactive {
         await this._processData(loadedData);
     }
 
+    processClassroom(){
+        for (let classroom of this.classrooms) {
+            classroom.students = this.students.filter(student => student.classroom_id[0] === classroom.id);
+        }
+    }
+
+    processControl(){
+         for (let control of this.controls) {
+            let studentGrades = this.studentGrades.filter(x => x.control_id[0] === control.id);
+            for (let studentGrade of studentGrades) {
+                let student = this.students.find(x => x.id === studentGrade.student_id[0]);
+                let grade = studentGrade.grade;
+                if (!control.studentGrade){
+                    control.studentGrade = [];
+                }
+                control.studentGrade.push({ student, grade });
+            }
+         }
+
+         console.log(this.controls);
+    }
+
+
+
     async _processData(loadedData) {
         this.students = loadedData["tetras.student"];
         this.teachers = loadedData["tetras.teacher"];
+        this.classrooms = loadedData["tetras.classroom"];
         this.controls = loadedData["tetras.control"];
+        this.studentGrades = loadedData["tetras.student.grade"];
+        this.processClassroom();
+        this.processControl();
     }
 
     showScreen(name, props) {

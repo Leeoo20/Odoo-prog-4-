@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+     <t t-name="tetras_school_management.ClassroomFormScreen">
+         <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
+         <div class="body">
+             <div class="container">
+                 <div class="wrapper">
+                     <div>
+                         <h2>Name</h2>
+                         <t t-esc="props.classroom.name"/>
+                     </div>
+                     <div>
+                         <h2>Students</h2>
+                            <ul>
+                                 <t t-foreach="props.classroom.students" t-as="student" t-key="student.id">
+                                     <ClassroomStudentLine name="student.name"
+                                                  studentId="student.id"/>
+                                 </t>
+                            </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </t>
+</templates>
