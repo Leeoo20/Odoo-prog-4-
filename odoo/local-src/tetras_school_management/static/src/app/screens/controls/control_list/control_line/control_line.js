@@ -11,5 +11,6 @@ export class ControlLine extends Component {
         controlId: Number,
         onClick: { type: Function, optional: true },
     };
+
 }
 

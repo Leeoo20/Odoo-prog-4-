@@ -45,7 +45,6 @@ export class TetrasStore extends Reactive {
             }
          }
 
-         console.log(this.controls);
     }
 
 
@@ -58,6 +57,8 @@ export class TetrasStore extends Reactive {
         this.studentGrades = loadedData["tetras.student.grade"];
         this.processClassroom();
         this.processControl();
+
+        console.log(this.controls);
     }
 
     showScreen(name, props) {

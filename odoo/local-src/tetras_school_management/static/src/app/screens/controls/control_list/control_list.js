@@ -19,6 +19,7 @@ export class ControlListScreen extends Component {
     async onControlClick(control) {
         this.tetras.showScreen("ControlFormScreen", {"control": control})
     }
+
 }
 
 registry.category("tetras_screens").add("ControlListScreen", ControlListScreen);

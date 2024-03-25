@@ -5,6 +5,7 @@
          <div class="body">
              <div class="container">
                  <h1>Students List</h1>
+                 <input type="text" id="name" t-on-keyup="onStudentCreate"/>
                  <table>
                      <tbody>
                          <t t-foreach="tetras.students" t-as="student" t-key="student.id">

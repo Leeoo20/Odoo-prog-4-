@@ -2,7 +2,7 @@
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.ClassroomLine">
          <tr t-on-click="props.onClick">
-             <td class="classroom-list-name"><t t-esc="props.name" /></td>
+             <td class="selector"><t t-esc="props.name" /></td>
          </tr>
     </t>
 </templates>

@@ -4,28 +4,23 @@
          <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
          <div class="body">
              <div class="container">
+                       <div class="button"
+                          t-on-click="() => state.isOpen = !state.isOpen">
+                         <i class='bx bxs-book-reader' ></i>
+                         Update
+                     </div>
                  <div class="wrapper">
                      <div>
                          <h2>Name</h2>
-                         <t t-esc="props.student.name"/>
+                         <input type="text" id="name" t-model="props.student.name" t-att-readonly="state.isOpen" t-on-keyup="onStudentChange"/>
                      </div>
                      <div>
                          <h2>Phone</h2>
-                         <t t-if="props.student.phone">
-                            <t t-esc="props.student.phone"/>
-                        </t>
-                         <t t-else="">
-                             Non remplis
-                         </t>
+                         <input type="text" id="phone" t-model="props.student.phone" t-att-readonly="state.isOpen" t-on-keyup="onStudentChange" />
                      </div>
                       <div>
                          <h2>Email</h2>
-                         <t t-if="props.student.email">
-                            <t t-esc="props.student.email"/>
-                        </t>
-                         <t t-else="">
-                             Non remplis
-                         </t>
+                          <input type="text" id="email" t-model="props.student.email" t-att-readonly="state.isOpen" t-on-keyup="onStudentChange" />
                      </div>
                  </div>
              </div>

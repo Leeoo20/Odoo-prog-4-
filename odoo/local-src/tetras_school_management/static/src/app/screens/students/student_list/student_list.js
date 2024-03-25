@@ -16,6 +16,27 @@ export class StudentListScreen extends Component {
     async onStudentClick(student) {
         this.tetras.showScreen("StudentFormScreen", {"student": student})
     }
+
+     async onStudentCreate(ev){
+        if(ev.key === 'Enter'){
+        const name = ev.target.value.trim();
+        if(name){
+        const student = {
+            name: name,
+            classroom_id: [],
+            grade_ids: [],
+        }
+
+            await this.tetras.orm.call("tetras.student", "create_student", [student]);
+
+            this.tetras.load_server_data();
+        }
+        }
+    }
+
+
+
+
 }
 
 registry.category("tetras_screens").add("StudentListScreen", StudentListScreen);

@@ -94,9 +94,16 @@ td{
   vertical-align:middle;
   font-weight: 300;
   font-size: 12px;
-  cursor: pointer;
+
 }
 
-td:hover{
+
+
+.selector {
+ cursor: pointer;
+}
+
+.selector:hover{
     color: #6b43ff;
 }
+
