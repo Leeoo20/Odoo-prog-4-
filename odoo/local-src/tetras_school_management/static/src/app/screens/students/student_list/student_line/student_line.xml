@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.StudentLine">
-         <tr t-on-click="props.onClick">
-             <td class="selector"><t t-esc="props.name" /></td>
+         <tr>
+             <td class="selector" t-on-click="props.onClick"><t t-esc="props.name" /></td>
+             <td class="button-delete" t-on-click="delete_student">X</td>
          </tr>
     </t>
 </templates>

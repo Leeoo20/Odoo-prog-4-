@@ -26,6 +26,7 @@ export class TetrasStore extends Reactive {
         await this._processData(loadedData);
     }
 
+
     processClassroom(){
         for (let classroom of this.classrooms) {
             classroom.students = this.students.filter(student => student.classroom_id[0] === classroom.id);
@@ -58,7 +59,7 @@ export class TetrasStore extends Reactive {
         this.processClassroom();
         this.processControl();
 
-        console.log(this.controls);
+        console.log(this.students);
     }
 
     showScreen(name, props) {

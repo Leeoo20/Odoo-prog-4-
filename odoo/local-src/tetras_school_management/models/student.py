@@ -11,7 +11,7 @@ class Student(models.Model):
         string="Grades",
         comodel_name="tetras.grade",
         inverse_name="student_id",
-        required=True,
+        required=True
     )
 
     classroom_id = fields.Many2one('tetras.classroom', string="Classroom")
@@ -21,7 +21,10 @@ class Student(models.Model):
     def create_student(self, vals_list):
         return self.create(vals_list)
     def write_student(self, vals_list):
-        return self.write(vals_list);
+        return self.write(vals_list)
+
+    def unlink_student(self):
+        return self.unlink()
 
 
 

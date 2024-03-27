@@ -10,11 +10,13 @@ class StudentGrade(models.Model):
         string="Student",
         comodel_name="tetras.student",
         required=True,
+        ondelete="cascade",
     )
     control_id = fields.Many2one(
         string="Control",
         comodel_name="tetras.control",
         required=True,
+        ondelete="cascade",
     )
 
 

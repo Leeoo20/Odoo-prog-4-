@@ -11,5 +11,24 @@
             <attribute name="t-on-keyup">onStudentChange</attribute>
         </xpath>
 
+            <xpath expr="//t/div[2]/div/div[2]/div[3]" position="after">
+            <div>
+                 <h2>Classrooms</h2>
+                <Dropdown showCaret="true">
+                    <t t-set-slot="toggler">
+                        <t t-out="props.contact.classroom_id[1]"/>
+                    </t>
+                     <t t-foreach="tetras.classrooms" t-as="classroom" t-key="classroom.id">
+                         <DropdownItem onSelected="() => this.onChangeClassroom(classroom)"><t t-out="classroom.name"/></DropdownItem>
+                     </t>
+                </Dropdown>
+
+            </div>
+         </xpath>
+
+
+
+
+
     </t>
 </templates>

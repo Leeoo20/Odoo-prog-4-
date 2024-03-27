@@ -10,5 +10,11 @@
           <xpath expr="//t/div[2]/div/div[2]/div[3]/input" position="attributes">
             <attribute name="t-on-keyup">onTeacherChange</attribute>
         </xpath>
+         <xpath expr="//t/div[2]/div/div[2]/div[3]" position="after">
+            <div>
+                 <h2>Diploma</h2>
+                  <input type="text" id="diploma" t-model="props.contact.diploma" t-att-readonly="state.isOpen" t-on-keyup="onTeacherChange"/>
+            </div>
+         </xpath>
     </t>
 </templates>

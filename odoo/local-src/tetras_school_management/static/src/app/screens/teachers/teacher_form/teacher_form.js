@@ -10,6 +10,7 @@ export class TeacherFormScreen extends ContactFormScreen {
 
 
      onTeacherChange(ev){
+     console.log(this.props);
         if(ev.key === 'Enter'){
             this.tetras.orm.call('tetras.teacher', 'write_teacher', [this.props.contact.id, this.props.contact]);
         }
