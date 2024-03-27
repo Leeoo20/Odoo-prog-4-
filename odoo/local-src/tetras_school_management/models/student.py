@@ -21,7 +21,7 @@ class Student(models.Model):
     def create_student(self, vals_list):
         return self.create(vals_list)
     def write_student(self, vals_list):
-        return self.write(vals_list)
+        return self.write(vals_list);
 
 
 

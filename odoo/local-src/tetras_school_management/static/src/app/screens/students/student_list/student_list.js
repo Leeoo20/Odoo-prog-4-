@@ -14,7 +14,7 @@ export class StudentListScreen extends Component {
     }
 
     async onStudentClick(student) {
-        this.tetras.showScreen("StudentFormScreen", {"student": student})
+        this.tetras.showScreen("StudentFormScreen", {"contact": student})
     }
 
      async onStudentCreate(ev){

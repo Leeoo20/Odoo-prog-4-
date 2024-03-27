@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
-     <t t-name="tetras_school_management.StudentFormScreen">
-         <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
-         <div class="body">
-             <div class="container">
-                       <div class="button"
-                          t-on-click="() => state.isOpen = !state.isOpen">
-                         <i class='bx bxs-book-reader' ></i>
-                         Update
-                     </div>
-                 <div class="wrapper">
-                     <div>
-                         <h2>Name</h2>
-                         <input type="text" id="name" t-model="props.student.name" t-att-readonly="state.isOpen" t-on-keyup="onStudentChange"/>
-                     </div>
-                     <div>
-                         <h2>Phone</h2>
-                         <input type="text" id="phone" t-model="props.student.phone" t-att-readonly="state.isOpen" t-on-keyup="onStudentChange" />
-                     </div>
-                      <div>
-                         <h2>Email</h2>
-                          <input type="text" id="email" t-model="props.student.email" t-att-readonly="state.isOpen" t-on-keyup="onStudentChange" />
-                     </div>
-                 </div>
-             </div>
-         </div>
+     <t t-name="tetras_school_management.StudentFormScreen" t-inherit="tetras_school_management.ContactFormScreen" t-inherit-mode="primary">
+        <xpath expr="//t/div[2]/div/div[2]/div[1]/input" position="attributes">
+            <attribute name="t-on-keyup">onStudentChange</attribute>
+        </xpath>
+         <xpath expr="//t/div[2]/div/div[2]/div[2]/input" position="attributes">
+            <attribute name="t-on-keyup">onStudentChange</attribute>
+        </xpath>
+          <xpath expr="//t/div[2]/div/div[2]/div[3]/input" position="attributes">
+            <attribute name="t-on-keyup">onStudentChange</attribute>
+        </xpath>
+
     </t>
 </templates>

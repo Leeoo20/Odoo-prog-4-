@@ -14,7 +14,7 @@ export class TeacherListScreen extends Component {
     }
 
     async onTeacherClick(teacher) {
-        this.tetras.showScreen("TeacherFormScreen", {"teacher": teacher})
+        this.tetras.showScreen("TeacherFormScreen", {"contact": teacher})
     }
 }
 

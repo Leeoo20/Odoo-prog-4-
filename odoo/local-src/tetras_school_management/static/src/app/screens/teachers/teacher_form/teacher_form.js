@@ -3,13 +3,19 @@
 import { Component } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { useTetras } from "@tetras_school_management/app/store/tetras_hook";
+import {ContactFormScreen} from "@tetras_school_management/app/screens/contacts/contact_form/contact_form";
 
-export class TeacherFormScreen extends Component {
+export class TeacherFormScreen extends ContactFormScreen {
     static template = "tetras_school_management.TeacherFormScreen";
 
-    setup() {
-        this.tetras = useTetras();
+
+     onTeacherChange(ev){
+        if(ev.key === 'Enter'){
+            this.tetras.orm.call('tetras.teacher', 'write_teacher', [this.props.contact.id, this.props.contact]);
+        }
     }
+
+
 
 }
 

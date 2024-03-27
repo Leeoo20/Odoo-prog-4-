@@ -6,6 +6,7 @@
              <div class="container">
                  <h1>Menu principal</h1>
                  <div class="wrapper">
+
                      <div class="button main-button"
                           t-on-click="() => tetras.showScreen('StudentListScreen')">
                          <i class='bx bxs-school'></i>
@@ -21,7 +22,6 @@
                          <i class='bx bx-detail'></i>
                          Controls
                      </div>
-
                       <div class="button main-button"
                           t-on-click="() => tetras.showScreen('ClassroomListScreen')">
                          <i class='bx bx-detail'></i>

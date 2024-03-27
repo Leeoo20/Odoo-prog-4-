@@ -10,5 +10,11 @@ class Contact(models.Model):
     phone = fields.Char(string="Phone")
     birth_day = fields.Date(string="Birth day")
 
+    def write_contact(self, vals_list):
+        return self.write(vals_list)
+
+
+
+
 
 

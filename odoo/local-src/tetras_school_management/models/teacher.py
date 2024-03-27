@@ -9,3 +9,5 @@ class Teacher(models.Model):
 
     diploma = fields.Char(string="Diploma")
 
+    def write_teacher(self, vals_list):
+        return self.write(vals_list);

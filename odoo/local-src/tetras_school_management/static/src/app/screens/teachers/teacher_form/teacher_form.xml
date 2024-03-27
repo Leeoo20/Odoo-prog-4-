@@ -1,38 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
-     <t t-name="tetras_school_management.TeacherFormScreen">
-         <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
-         <div class="body">
-             <div class="container">
-                 <div class="wrapper">
-                     <div>
-                         <h2>Name</h2>
-                         <t t-esc="props.teacher.name"/>
-                     </div>
-                      <div>
-                         <h2>Phone</h2>
-                          <t t-if="props.teacher.phone">
-                            <t t-esc="props.teacher.phone"/>
-                        </t>
-                         <t t-else="">
-                             Non remplis
-                         </t>
-                     </div>
-                     <div>
-                         <h2>Email</h2>
-                          <t t-if="props.teacher.email">
-                            <t t-esc="props.teacher.email"/>
-                        </t>
-                         <t t-else="">
-                             Non remplis
-                         </t>
-                     </div>
-                     <div>
-                         <h2>Diploma</h2>
-                         <t t-esc="props.teacher.diploma"/>
-                     </div>
-                 </div>
-             </div>
-         </div>
+     <t t-name="tetras_school_management.TeacherFormScreen" t-inherit="tetras_school_management.ContactFormScreen" t-inherit-mode="primary">
+        <xpath expr="//t/div[2]/div/div[2]/div[1]/input" position="attributes">
+            <attribute name="t-on-keyup">onTeacherChange</attribute>
+        </xpath>
+         <xpath expr="//t/div[2]/div/div[2]/div[2]/input" position="attributes">
+            <attribute name="t-on-keyup">onTeacherChange</attribute>
+        </xpath>
+          <xpath expr="//t/div[2]/div/div[2]/div[3]/input" position="attributes">
+            <attribute name="t-on-keyup">onTeacherChange</attribute>
+        </xpath>
     </t>
 </templates>
