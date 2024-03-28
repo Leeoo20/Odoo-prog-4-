@@ -3,7 +3,7 @@
 
     <t t-name="tetras_school_management.Chrome">
         <div class="tetras dvh-100 d-flex flex-column">
-<!--            <Navbar />-->
+           <Navbar/>
             <div class="tetras-content flex-grow-1 overflow-auto">
                 <t t-component="tetras.mainScreen.component"
                     t-props="tetras.mainScreen.props"/>

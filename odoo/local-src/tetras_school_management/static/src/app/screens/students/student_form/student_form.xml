@@ -13,6 +13,10 @@
 
             <xpath expr="//t/div[2]/div/div[2]/div[3]" position="after">
             <div>
+                <h2>Average</h2>
+                <input type="text" id="name" t-model="props.contact.average_grade" t-att-readonly="true"  />
+            </div>
+            <div>
                  <h2>Classrooms</h2>
                 <Dropdown showCaret="true">
                     <t t-set-slot="toggler">

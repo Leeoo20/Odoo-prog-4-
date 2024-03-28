@@ -11,6 +11,7 @@
                         <field name="phone"/>
                         <field name="birth_day"/>
                         <field name="classroom_id"/>
+                        <field name="average_grade"/>
                     </group>
                     <group>
                         <field name="grade_ids">

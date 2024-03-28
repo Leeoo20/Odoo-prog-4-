@@ -5,10 +5,18 @@
          <div class="body">
              <div class="container">
                  <h1>Students List</h1>
-                 <input type="text" id="name" t-on-keyup="onStudentCreate"/>
+                 <div class="search-section">
+                    <input type="text" id="search" t-on-keyup.stop="searchStudent"/>
+                 </div>
+                 <div class="add-section">
+                     <input type="text" id="name" t-model="state.studentName"/>
+                     <div type="button" class="button-add" t-on-click="onStudentCreate">
+                         Ajoutez
+                     </div>
+                 </div>
                  <table>
                      <tbody>
-                         <t t-foreach="tetras.students" t-as="student" t-key="student.id">
+                         <t t-foreach="state.students" t-as="student" t-key="student.id">
                              <StudentLine name="student.name"
                                           studentId="student.id"
                                           onClick="() => this.onStudentClick(student)" />

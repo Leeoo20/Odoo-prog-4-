@@ -28,6 +28,14 @@
                          Classrooms
                      </div>
 
+                     <div class="button main-button"
+                          t-on-click="() => tetras.showScreen('ChatgptScreen')">
+                         <i class='bx bx-detail'></i>
+                         Chatgpt
+                     </div>
+
+
+
                  </div>
              </div>
          </div>

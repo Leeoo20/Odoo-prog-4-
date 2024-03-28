@@ -15,7 +15,7 @@
 }
 
 .container{
-    width: 900px;
+    width: 1000px;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
@@ -110,6 +110,9 @@ td{
     color: #6b43ff;
 }
 
+img{
+    max-width: 80%;
+}
 
 .button-delete{
     cursor: pointer;

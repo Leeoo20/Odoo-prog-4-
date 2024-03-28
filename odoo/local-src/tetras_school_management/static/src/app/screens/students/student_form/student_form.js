@@ -13,6 +13,7 @@ export class StudentFormScreen extends ContactFormScreen {
     static components = {Dropdown,DropdownItem}
 
     onStudentChange(ev){
+    console.log(this);
         if(ev.key === 'Enter'){
         console.log(this.props)
             this.tetras.orm.call('tetras.student', 'write_student', [this.props.contact.id, this.props.contact]);
