@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.ContactFormScreen">
-         <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
+         <div></div>
          <div class="body">
              <div class="container">
-               <div class="contact-form-button-update"
+               <div class="button"
                   t-on-click="() => state.isOpen = !state.isOpen">
                  <i class='bx bxs-book-reader' ></i>
-                    Update
+                    Modifier
                 </div>
                  <div class="wrapper">
                      <div>

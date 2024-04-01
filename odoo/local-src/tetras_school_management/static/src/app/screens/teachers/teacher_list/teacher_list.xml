@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.TeacherListScreen">
-         <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
          <div class="body">
              <div class="container">
-                 <strong>Teachers List</strong>
+                 <h1>Teachers List</h1>
                  <table>
                      <tbody>
                          <t t-foreach="tetras.teachers" t-as="teacher" t-key="teacher.id">

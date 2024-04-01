@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
     <t t-name="tetras_school_management.Navbar">
-        <h1>navbar</h1>
+        <ul>
+          <li><a class="active" id="StudentListScreen" t-on-click="changeScreen" t-att-data-screen="Student">
+              <i class='bx bxs-school'></i>
+                         Students
+          </a></li>
+          <li><a  id="TeacherListScreen"  t-on-click="changeScreen" ><i class='bx bxs-book-reader' ></i>
+                         Teachers</a></li>
+          <li><a  id ="ControlListScreen" t-on-click="changeScreen"><i class='bx bx-detail'></i>
+                         Controls</a></li>
+          <li><a id="ClassroomListScreen" t-on-click="changeScreen"><i class='bx bx-home-alt-2'></i>
+                         Classrooms</a></li>
+        </ul>
     </t>
 </templates>

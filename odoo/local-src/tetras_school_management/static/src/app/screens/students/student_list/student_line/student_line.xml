@@ -3,7 +3,7 @@
      <t t-name="tetras_school_management.StudentLine">
          <tr>
              <td class="selector" t-on-click="props.onClick"><t t-esc="props.name" /></td>
-             <td class="button-delete" t-on-click="delete_student">X</td>
+             <td class="button" t-on-click="delete_student"><i class='bx bx-trash'></i></td>
          </tr>
     </t>
 </templates>
